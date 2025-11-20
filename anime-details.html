@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AniStream - Anime Details</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">AniStream</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="anime-list.html">Anime List</a></li>
+                <li><a href="genres.html">Genres</a></li>
+                <li><a href="watchlist.html">My Watchlist</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="btn-secondary" id="loginBtn">Log In</button>
+                <button class="btn-primary" id="signupBtn">Sign Up</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Anime Details Section -->
+    <section class="anime-details">
+        <div class="container">
+            <div class="details-layout">
+                <div class="details-poster">
+                    <img src="images/demon-slayer.jpg" alt="Demon Slayer" onerror="this.src='https://via.placeholder.com/400x600/7c3aed/ffffff?text=Demon+Slayer'">
+                    <button class="btn-primary full-width" onclick="addToWatchlist()">Add to Watchlist</button>
+                    <button class="btn-secondary full-width">Watch Now</button>
+                </div>
+                <div class="details-info">
+                    <h1>Demon Slayer: Kimetsu no Yaiba</h1>
+                    <div class="details-meta">
+                        <span class="status-badge">Ongoing</span>
+                        <span>⭐ 8.7/10</span>
+                        <span>📺 52 Episodes</span>
+                        <span>📅 2019</span>
+                    </div>
+                    <div class="details-genres">
+                        <span class="genre-tag">Action</span>
+                        <span class="genre-tag">Supernatural</span>
+                        <span class="genre-tag">Adventure</span>
+                    </div>
+                    <h3>Synopsis</h3>
+                    <p>
+                        Demon Slayer: Kimetsu no Yaiba is a Japanese manga series written and illustrated by Koyoharu Gotouge. 
+                        It follows Tanjiro Kamado, a young boy who becomes a demon slayer after his family is slaughtered and his 
+                        younger sister Nezuko is turned into a demon. Tanjiro sets out on a dangerous journey to find a cure for 
+                        his sister and avenge his family.
+                    </p>
+                    <p>
+                        The story is set in Taishō-era Japan and follows Tanjiro as he joins the Demon Slayer Corps, an organization 
+                        that fights demons. Along the way, he meets allies and faces powerful demons in his quest to save his sister 
+                        and protect humanity.
+                    </p>
+                    <h3>Additional Information</h3>
+                    <ul class="info-list">
+                        <li><strong>Studio:</strong> Ufotable</li>
+                        <li><strong>Premiered:</strong> Spring 2019</li>
+                        <li><strong>Duration:</strong> 24 min per episode</li>
+                        <li><strong>Type:</strong> TV Series</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AniStream</h3>
+                    <p>Your ultimate destination for anime streaming.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="anime-list.html">Browse Anime</a></li>
+                        <li><a href="genres.html">Genres</a></li>
+                        <li><a href="watchlist.html">My Watchlist</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Watch Together</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AniStream. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

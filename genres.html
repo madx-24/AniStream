@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AniStream - Genres</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">AniStream</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="anime-list.html">Anime List</a></li>
+                <li><a href="genres.html" class="active">Genres</a></li>
+                <li><a href="watchlist.html">My Watchlist</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="btn-secondary" id="loginBtn">Log In</button>
+                <button class="btn-primary" id="signupBtn">Sign Up</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h1>Browse by Genre</h1>
+            <p>Find anime based on your favorite genres</p>
+        </div>
+    </div>
+
+    <!-- Genre Cards -->
+    <section class="genres-section">
+        <div class="container">
+            <div class="genre-cards-grid">
+                <div class="genre-card" onclick="filterByGenre('action')">
+                    <div class="genre-icon">⚔️</div>
+                    <h3>Action</h3>
+                    <p>24 anime</p>
+                </div>
+                <div class="genre-card" onclick="filterByGenre('comedy')">
+                    <div class="genre-icon">😂</div>
+                    <h3>Comedy</h3>
+                    <p>18 anime</p>
+                </div>
+                <div class="genre-card" onclick="filterByGenre('romance')">
+                    <div class="genre-icon">💕</div>
+                    <h3>Romance</h3>
+                    <p>15 anime</p>
+                </div>
+                <div class="genre-card" onclick="filterByGenre('drama')">
+                    <div class="genre-icon">🎭</div>
+                    <h3>Drama</h3>
+                    <p>20 anime</p>
+                </div>
+                <div class="genre-card" onclick="filterByGenre('fantasy')">
+                    <div class="genre-icon">🧙</div>
+                    <h3>Fantasy</h3>
+                    <p>22 anime</p>
+                </div>
+                <div class="genre-card" onclick="filterByGenre('horror')">
+                    <div class="genre-icon">👻</div>
+                    <h3>Horror</h3>
+                    <p>12 anime</p>
+                </div>
+                <div class="genre-card" onclick="filterByGenre('scifi')">
+                    <div class="genre-icon">🚀</div>
+                    <h3>Sci-Fi</h3>
+                    <p>16 anime</p>
+                </div>
+                <div class="genre-card" onclick="filterByGenre('sports')">
+                    <div class="genre-icon">⚽</div>
+                    <h3>Sports</h3>
+                    <p>10 anime</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AniStream</h3>
+                    <p>Your ultimate destination for anime streaming.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="anime-list.html">Browse Anime</a></li>
+                        <li><a href="genres.html">Genres</a></li>
+                        <li><a href="watchlist.html">My Watchlist</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Watch Together</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AniStream. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

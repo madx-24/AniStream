@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AniStream - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">AniStream</div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="anime-list.html">Anime List</a></li>
+                <li><a href="genres.html">Genres</a></li>
+                <li><a href="watchlist.html">My Watchlist</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="btn-secondary" id="loginBtn">Log In</button>
+                <button class="btn-primary" id="signupBtn">Sign Up</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome to AniStream</h1>
+            <p class="hero-subtitle">Your Ultimate Anime Streaming Destination</p>
+            <p class="hero-description">
+                Discover thousands of anime series and movies. Watch the latest episodes, 
+                create your watchlist, and connect with fellow anime fans. Stream anytime, 
+                anywhere with AniStream.
+            </p>
+            <div class="hero-features">
+                <ul>
+                    <li>🎬 Watch HD quality anime</li>
+                    <li>📺 New episodes every week</li>
+                    <li>💾 Create your personal watchlist</li>
+                    <li>👥 Watch together with friends</li>
+                    <li>🎨 Transform photos into anime style</li>
+                </ul>
+            </div>
+            <button class="btn-hero">Start Watching</button>
+        </div>
+        <div class="hero-image">
+            <img src="images/hero-banner.jpg" alt="Anime Banner" onerror="this.src='https://via.placeholder.com/600x400/7c3aed/ffffff?text=AniStream+Banner'">
+        </div>
+    </header>
+
+    <!-- AI Anime Converter Section (Demo Feature) -->
+    <section class="ai-converter">
+        <div class="container">
+            <h2>✨ Transform Your Photos into Anime!</h2>
+            <p>Upload your photo and see it transformed into anime or chibi style (Demo Feature)</p>
+            <div class="converter-demo">
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-icon">📸</div>
+                    <p>Click to upload your photo</p>
+                    <input type="file" id="fileInput" accept="image/*" hidden>
+                </div>
+                <div class="conversion-result" id="conversionResult" style="display: none;">
+                    <div class="result-images">
+                        <div class="result-item">
+                            <img id="originalImage" alt="Original">
+                            <p>Original</p>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="result-item">
+                            <img id="animeImage" alt="Anime Style">
+                            <p>Anime Style</p>
+                        </div>
+                    </div>
+                    <button class="btn-secondary" id="resetBtn">Try Another Photo</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Anime Section -->
+    <section class="featured-section">
+        <div class="container">
+            <h2>🔥 Featured Anime</h2>
+            <div class="anime-grid">
+                <div class="anime-card" onclick="openModal('Demon Slayer: Kimetsu no Yaiba', 'Action, Supernatural', 'A young boy becomes a demon slayer after his family is slaughtered.')">
+                    <img src="images/demon-slayer.jpg" alt="Demon Slayer" onerror="this.src='https://via.placeholder.com/300x400/9333ea/ffffff?text=Demon+Slayer'">
+                    <div class="anime-info">
+                        <h3>Demon Slayer</h3>
+                        <p>Action, Supernatural</p>
+                    </div>
+                </div>
+                <div class="anime-card" onclick="openModal('Jujutsu Kaisen', 'Action, Dark Fantasy', 'A high school student joins a secret organization to fight curses.')">
+                    <img src="images/jujutsu-kaisen.jpg" alt="Jujutsu Kaisen" onerror="this.src='https://via.placeholder.com/300x400/7c3aed/ffffff?text=Jujutsu+Kaisen'">
+                    <div class="anime-info">
+                        <h3>Jujutsu Kaisen</h3>
+                        <p>Action, Dark Fantasy</p>
+                    </div>
+                </div>
+                <div class="anime-card" onclick="openModal('Attack on Titan', 'Action, Drama', 'Humanity fights for survival against giant humanoid creatures.')">
+                    <img src="images/attack-on-titan.jpg" alt="Attack on Titan" onerror="this.src='https://via.placeholder.com/300x400/6366f1/ffffff?text=Attack+on+Titan'">
+                    <div class="anime-info">
+                        <h3>Attack on Titan</h3>
+                        <p>Action, Drama</p>
+                    </div>
+                </div>
+                <div class="anime-card" onclick="openModal('My Hero Academia', 'Action, Superhero', 'A powerless boy enrolls in a prestigious hero academy.')">
+                    <img src="images/my-hero-academia.jpg" alt="My Hero Academia" onerror="this.src='https://via.placeholder.com/300x400/8b5cf6/ffffff?text=My+Hero+Academia'">
+                    <div class="anime-info">
+                        <h3>My Hero Academia</h3>
+                        <p>Action, Superhero</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Section -->
+    <section class="trending-section">
+        <div class="container">
+            <h2>📈 Trending Now</h2>
+            <div class="anime-grid">
+                <div class="anime-card" onclick="openModal('Chainsaw Man', 'Action, Horror', 'A young man becomes a devil hunter with chainsaw powers.')">
+                    <img src="images/chainsaw-man.jpg" alt="Chainsaw Man" onerror="this.src='https://via.placeholder.com/300x400/a855f7/ffffff?text=Chainsaw+Man'">
+                    <div class="anime-info">
+                        <h3>Chainsaw Man</h3>
+                        <p>Action, Horror</p>
+                    </div>
+                </div>
+                <div class="anime-card" onclick="openModal('Spy x Family', 'Comedy, Action', 'A spy must build a fake family for a mission.')">
+                    <img src="images/spy-family.jpg" alt="Spy x Family" onerror="this.src='https://via.placeholder.com/300x400/c084fc/ffffff?text=Spy+x+Family'">
+                    <div class="anime-info">
+                        <h3>Spy x Family</h3>
+                        <p>Comedy, Action</p>
+                    </div>
+                </div>
+                <div class="anime-card" onclick="openModal('One Piece', 'Adventure, Action', 'A pirate crew searches for the ultimate treasure.')">
+                    <img src="images/one-piece.jpg" alt="One Piece" onerror="this.src='https://via.placeholder.com/300x400/e879f9/ffffff?text=One+Piece'">
+                    <div class="anime-info">
+                        <h3>One Piece</h3>
+                        <p>Adventure, Action</p>
+                    </div>
+                </div>
+                <div class="anime-card" onclick="openModal('Tokyo Revengers', 'Action, Drama', 'A man travels back in time to save his girlfriend.')">
+                    <img src="images/tokyo-revengers.jpg" alt="Tokyo Revengers" onerror="this.src='https://via.placeholder.com/300x400/f0abfc/ffffff?text=Tokyo+Revengers'">
+                    <div class="anime-info">
+                        <h3>Tokyo Revengers</h3>
+                        <p>Action, Drama</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Anime Modal -->
+    <div id="animeModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p class="modal-genre" id="modalGenre"></p>
+            <p id="modalDescription"></p>
+            <div class="modal-buttons">
+                <button class="btn-primary" onclick="addToWatchlist()">Add to Watchlist</button>
+                <button class="btn-secondary">Watch Now</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AniStream</h3>
+                    <p>Your ultimate destination for anime streaming. Watch thousands of anime series and movies.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="anime-list.html">Browse Anime</a></li>
+                        <li><a href="genres.html">Genres</a></li>
+                        <li><a href="watchlist.html">My Watchlist</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Watch Together</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AniStream. All rights reserved. | Made for educational purposes</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
